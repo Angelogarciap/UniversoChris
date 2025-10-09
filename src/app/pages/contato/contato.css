@@ -1,0 +1,136 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  background-color: #7a3cff;
+  padding: 10px;
+  text-align: center;
+}
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
+}
+header nav ul li a:hover {
+  background-color: #5e29a5;
+  border-radius: 4px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.contact .contact-info {
+  max-width: 350px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+.contact .contact-info p {
+  margin-bottom: 20px;
+}
+.contact .contact-info strong {
+  color: #7a3cff;
+}
+.contact .contact-form {
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+}
+.contact .contact-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #7a3cff;
+  text-align: center;
+}
+.contact .contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+.contact .contact-form input,
+.contact .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+.contact .contact-form input:focus,
+.contact .contact-form textarea:focus {
+  border-color: #7a3cff;
+  outline: none;
+}
+.contact .contact-form input::-moz-placeholder, .contact .contact-form textarea::-moz-placeholder {
+  color: #aaa;
+}
+.contact .contact-form input::placeholder,
+.contact .contact-form textarea::placeholder {
+  color: #aaa;
+}
+.contact .contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.contact .contact-form .g-recaptcha {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.contact .contact-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #7a3cff;
+  color: #fff;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.contact .contact-form button:hover {
+  background-color: #5e29a5;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .contact-form {
+    width: 90%;
+  }
+}/*# sourceMappingURL=contato.css.map */

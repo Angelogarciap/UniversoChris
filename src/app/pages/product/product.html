@@ -1,1 +1,53 @@
-<p>product works!</p>
+<app-header></app-header>
+<main class="product-page">
+  <section class="gallery">
+    <img src="img1.jpg" alt="Borracha Batom Kaz" class="main-img" />
+    <div class="thumbs">
+      <img src="thumb1.jpg" alt="" />
+      <img src="thumb2.jpg" alt="" />
+      <img src="thumb3.jpg" alt="" />
+      <img src="thumb4.jpg" alt="" />
+    </div>
+  </section>
+
+  <section class="details">
+    <h1>Borracha Batom Kaz</h1>
+    <p class="price">R$6,00</p>
+
+    <div class="colors">
+      <label>Cor:</label>
+      <button class="color purple"></button>
+      <button class="color yellow"></button>
+    </div>
+
+    <div class="quantity">
+      <label for="qty">Quantidade:</label>
+      <input type="number" id="qty" min="1" value="1" />
+    </div>
+
+    <button class="buy-btn">Comprar</button>
+
+    <div class="extra">
+      <label><input type="checkbox" /> Adicionar embalagem de presente</label>
+      <p>Frete calculado no checkout</p>
+    </div>
+  </section>
+</main>
+
+<section class="description">
+  <h2>Descrição</h2>
+  <h3>🩷 Borracha Batom Kaz</h3>
+  <p>
+    A borracha Batom Kaz é a escolha perfeita de estilo e diversão para o seu estojo! Seu design
+    inovador em formato de batom facilita o uso e evita sujeira.
+  </p>
+  <ul>
+    <li>Apaga com facilidade;</li>
+    <li>Compacta e portátil, ideal para levar na mochila;</li>
+    <li>Design divertido e moderno;</li>
+    <li>Embalagem com cores sortidas;</li>
+  </ul>
+  <p>*Imagens meramente ilustrativas.</p>
+</section>
+
+<app-footer></app-footer>

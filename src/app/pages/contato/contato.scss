@@ -1,0 +1,164 @@
+// Variáveis para cores e fontes
+$primary-color: #7a3cff;
+$secondary-color: #f4f4f4;
+$text-color: #333;
+$button-color: #7a3cff;
+$button-hover-color: #5e29a5;
+$input-border-color: #ccc;
+$input-focus-border-color: #7a3cff;
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: $secondary-color;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}
+
+// Estilo para o cabeçalho
+header {
+  background-color: $primary-color;
+  padding: 10px;
+  text-align: center;
+
+  nav {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      li {
+        display: inline-block;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+          font-size: 1.2rem;
+          padding: 8px 12px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #5e29a5;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Estilo para o formulário de contato
+.contact {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .contact-info {
+    max-width: 350px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: $text-color;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    strong {
+      color: $primary-color;
+    }
+  }
+
+  .contact-form {
+    max-width: 500px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      color: $primary-color;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: $text-color;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      border: 1px solid $input-border-color;
+      font-size: 1rem;
+      box-sizing: border-box;
+      transition: border 0.3s ease;
+
+      &:focus {
+        border-color: $input-focus-border-color;
+        outline: none;
+      }
+
+      &::placeholder {
+        color: #aaa;
+      }
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .g-recaptcha {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: $button-color;
+      color: #fff;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: $button-hover-color;
+      }
+    }
+  }
+}
+
+// Responsividade para telas menores
+@media (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-form {
+    width: 90%;
+  }
+}

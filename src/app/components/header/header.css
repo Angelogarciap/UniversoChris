@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   background-color: #fff;
   color: #333;
 }
@@ -20,19 +20,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  .logo {
-    font-size: 1.6rem;
-    font-weight: 500;
-    color: #fff;
-    text-align: right;
-  }
-
-  .actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-  }
+}
+.navbar .logo {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: right;
+}
+.navbar .actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .header-inner-content {
@@ -57,29 +55,25 @@ nav ul {
   display: flex;
   align-items: center;
   gap: 15px;
-
-  p {
-    font-size: 0.9rem;
-    color: #fff;
-    margin: 0;
-
-    a {
-      color: #fff;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  .cart-icon {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
+}
+.user-area p {
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0;
+}
+.user-area p a {
+  color: #fff;
+  text-decoration: none;
+}
+.user-area p a:hover {
+  text-decoration: underline;
+}
+.user-area .cart-icon {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 nav ul li {
@@ -109,19 +103,16 @@ nav ul li:hover {
   display: flex;
   justify-content: center;
   margin-top: 10px;
-
-  ul {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-
-    li a {
-      color: #fff;
-      text-decoration: none;
-
-      &:hover {
-        font-weight: bold;
-      }
-    }
-  }
 }
+.navbar-links ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.navbar-links ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-links ul li a:hover {
+  font-weight: bold;
+}/*# sourceMappingURL=header.css.map */
