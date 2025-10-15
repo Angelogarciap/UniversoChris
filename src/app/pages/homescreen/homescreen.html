@@ -1,169 +1,132 @@
-<app-header></app-header>
-
-<header class="header-banner">
-  <div class="banner">
-    <img
-      src="https://dcdn-us.mitiendanube.com/stores/004/410/719/themes/toluca/2-slide-1757375772546-5544835435-7837a6b0f5f9286cd61c8f4f9d6fcfe01757375936-1920-1920.webp?152329209"
-      alt="Bem vindo ao Universo Chris"
-    />
+<!--  CARROSSEL INICIAL (AUTOMÁTICO)  -->
+<section class="carrossel-home">
+  <div class="carousel-container">
+    <div *ngFor="let banner of banners; let i = index" 
+         class="carousel-slide fade" 
+         [class.active]="currentSlide === i">
+      <img [src]="banner.src" [alt]="banner.alt">
+    </div>
   </div>
-</header>
+</section>
 
-<section class="intro">
+<!--  HERO  -->
+<section class="hero">
   <h2>✨ Bem-vindo ao Universo Chris ✨</h2>
   <p>
-    Aqui a criatividade ganha vida! Explore nossa papelaria e encontre produtos fofos, funcionais e
-    cheios de personalidade para deixar seu dia a dia mais organizado e divertido.
+    Aqui a criatividade ganha vida! Explore nossa papelaria e encontre produtos fofos, funcionais e cheios de personalidade
+    para deixar seu dia a dia mais organizado e divertido.
   </p>
 </section>
 
-<section class="products-section destaques">
-  <h2>Destaques</h2>
+<!--  DESTAQUES  -->
+<section class="destaques">
+  <div class="container">
+    <h3 class="section-title">Destaques</h3>
 
-  <div class="product-card">
-    <img
-      src="https://dcdn-us.mitiendanube.com/stores/004/410/719/products/17-9bed0e03340f8043e617578967007693-1024-1024.webp"
-      alt="Chaveiro de Pelúcia Gatinho"
-    />
-    <h3>Chaveiro de Pelúcia Gatinho</h3>
-    <p class="price">R$49,90</p>
-    <small>1 em estoque</small>
-  </div>
+    <div class="carousel">
+      <button class="carousel-btn prev" (click)="prevCarousel('destaques')">&#10094;</button>
 
-  <div class="product-card">
-    <img
-      src="https://dcdn-us.mitiendanube.com/stores/004/410/719/products/produtos-4-084c2db3efa53eb60b17573747073815-1024-1024.webp"
-      alt="Cola Stitch"
-    />
-    <h3>Cola Stitch – Disney</h3>
-    <p class="price">R$18,30</p>
-    <small>12 em estoque</small>
-  </div>
+      <div #carouselTrack class="carousel-track">
+        <div class="card" *ngFor="let produto of produtosDestaques">
+          <img [src]="produto.imagem" [alt]="produto.nome">
+          <h4>{{produto.nome}}</h4>
+          <p class="price">
+            <span class="discount" *ngIf="produto.desconto">{{produto.desconto}}</span> 
+            R${{produto.preco}}
+            <span class="old-price" *ngIf="produto.precoOriginal">R${{produto.precoOriginal}}</span>
+          </p>
+          <span class="stock">{{produto.estoque}} em estoque</span>
+        </div>
+      </div>
 
-  <div class="product-card">
-    <img
-      src="https://dcdn-us.mitiendanube.com/stores/004/410/719/products/8-5-35a88ef49f425856a717573701266998-1024-1024.webp"
-      alt="Borracha Batom Kaz"
-    />
-    <h3>Borracha Batom Kaz</h3>
-    <p class="price">R$6,00</p>
-    <small>8 em estoque</small>
-  </div>
-
-  <div class="product-card">
-    <img src="chaveiro-ursinho.jpg" alt="Chaveiro de Pelúcia Ursinho" />
-    <h3>Chaveiro de Pelúcia Ursinho...</h3>
-    <p class="price">R$49,90</p>
-    <small>3 em estoque</small>
-  </div>
-
-  <div class="product-card">
-    <img src="borracha-hello-kitty.jpg" alt="Borracha Hello Kitty" />
-    <h3>Borracha Hello kitty - Leo&Leo</h3>
-    <p class="price"><span class="discount">-17% OFF</span> R$5,00 <s>R$6,00</s></p>
-    <small>15 em estoque</small>
-  </div>
-</section>
-
-<section class="products-section mais-vendidos">
-  <h2>Mais vendidos</h2>
-
-  <div class="product-list">
-    <div class="product-card">
-      <img src="pelucia-stitch.jpg" alt="Chaveiro de Pelúcia Stitch" />
-      <h3>Chaveiro de Pelúcia Stitch...</h3>
-      <p class="price">R$49,90</p>
-    </div>
-
-    <div class="product-card">
-      <img src="caneta-pilula.jpg" alt="Caneta Pílula Colorida" />
-      <h3>Caneta Pílula Colorida</h3>
-      <p class="price">R$6,00</p>
-    </div>
-
-    <div class="product-card">
-      <img src="marca-texto.jpg" alt="Caneta Marca Texto Tom" />
-      <h3>Caneta Marca Texto Tom...</h3>
-      <p class="price">R$5,00</p>
+      <button class="carousel-btn next" (click)="nextCarousel('destaques')">&#10095;</button>
     </div>
   </div>
 </section>
 
-<section class="products-section ofertas">
-  <h2>Ofertas</h2>
+<!--  CATEGORIAS  -->
+<section class="categorias">
+  <div class="container">
+    <h3 class="section-title">Coleções</h3>
 
-  <div class="product-list">
-    <div class="product-card">
-      <img src="fone-hello-kitty.jpg" alt="Fone de Ouvido Hello Kitty" />
-      <h3>Fone de Ouvido Hello kitty com...</h3>
-      <p class="price"><span class="discount">-37% OFF</span> R$54,90 <s>R$81,90</s></p>
-      <small>3 em estoque</small>
-    </div>
-
-    <div class="product-card">
-      <img src="caneta-hidrocorr.jpg" alt="Caneta Hidrocorr Mentos" />
-      <h3>Caneta Hidrocorr Mentos...</h3>
-      <p class="price"><span class="discount">-28% OFF</span> R$24,60 <s>R$33,30</s></p>
-    </div>
-
-    <div class="product-card">
-      <img src="kit-canetinha.jpg" alt="Kit de Canetas Mentos" />
-      <h3>Kit c/ 2 Canetas Mentos...</h3>
-      <p class="price"><span class="discount">-32% OFF</span> R$7,80 <s>R$11,50</s></p>
-    </div>
-
-    <div class="product-card">
-      <img src="kit-4-canetinhas.jpg" alt="Kit 4 Canetas Mentos" />
-      <h3>Kit c/ 4 Canetas Mentos...</h3>
-      <p class="price"><span class="discount">-42% OFF</span> R$11,50 <s>R$19,90</s></p>
-    </div>
-
-    <div class="product-card">
-      <img src="giz-cera.jpg" alt="Giz de Cera Caneta Troca..." />
-      <h3>Giz de Cera Caneta Troca...</h3>
-      <p class="price"><span class="discount">-34% OFF</span> R$8,20 <s>R$12,40</s></p>
+    <div class="categorias-grid">
+      <div class="categoria-card" *ngFor="let categoria of categorias">
+        <img [src]="categoria.imagem" [alt]="categoria.nome">
+        <div class="categoria-info">
+          <h4>{{categoria.nome}}</h4>
+          <a [routerLink]="categoria.link" class="btn">VER PRODUTOS</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="products-section autorais">
-  <h2>Produtos Autorais</h2>
+<!--  MAIS VENDIDOS  -->
+<section class="mais-vendidos">
+  <div class="container">
+    <h3 class="section-title">Mais vendidos</h3>
 
-  <div class="product-list">
-    <div class="product-card">
-      <img
-        src="https://dcdn-us.mitiendanube.com/stores/004/410/719/products/5-4-c38297a3c4403f09a417586538276394-1024-1024.webp"
-        alt="Broche Hello Kitty"
-      />
-      <h3>Broche Hello Kitty</h3>
-      <p class="price"><span class="discount">-37% OFF</span> R$54,90 <s>R$81,90</s></p>
-      <small>3 em estoque</small>
-    </div>
+    <div class="carousel">
+      <button class="carousel-btn prev" (click)="prevCarousel('maisVendidos')">&#10094;</button>
 
-    <div class="product-card">
-      <img src="caneta-hidrocorr.jpg" alt="Caneta Hidrocorr Mentos" />
-      <h3>Caneta Hidrocorr Mentos...</h3>
-      <p class="price"><span class="discount">-28% OFF</span> R$24,60 <s>R$33,30</s></p>
-    </div>
+      <div #carouselTrack class="carousel-track">
+        <div class="card" *ngFor="let produto of produtosMaisVendidos">
+          <img [src]="produto.imagem" [alt]="produto.nome">
+          <h4>{{produto.nome}}</h4>
+          <p class="price">R${{produto.preco}}</p>
+          <span class="stock">{{produto.estoque}} em estoque</span>
+        </div>
+      </div>
 
-    <div class="product-card">
-      <img src="kit-canetinha.jpg" alt="Kit de Canetas Mentos" />
-      <h3>Kit c/ 2 Canetas Mentos...</h3>
-      <p class="price"><span class="discount">-32% OFF</span> R$7,80 <s>R$11,50</s></p>
-    </div>
-
-    <div class="product-card">
-      <img src="kit-4-canetinhas.jpg" alt="Kit 4 Canetas Mentos" />
-      <h3>Kit c/ 4 Canetas Mentos...</h3>
-      <p class="price"><span class="discount">-42% OFF</span> R$11,50 <s>R$19,90</s></p>
-    </div>
-
-    <div class="product-card">
-      <img src="giz-cera.jpg" alt="Giz de Cera Caneta Troca..." />
-      <h3>Giz de Cera Caneta Troca...</h3>
-      <p class="price"><span class="discount">-34% OFF</span> R$8,20 <s>R$12,40</s></p>
+      <button class="carousel-btn next" (click)="nextCarousel('maisVendidos')">&#10095;</button>
     </div>
   </div>
 </section>
 
-<app-footer></app-footer>
+<!--  LANÇAMENTOS  -->
+<section class="lancamentos">
+  <div class="container">
+    <h3 class="section-title">Lançamentos</h3>
+
+    <div class="carousel">
+      <button class="carousel-btn prev" (click)="prevCarousel('lancamentos')">&#10094;</button>
+
+      <div #carouselTrack class="carousel-track">
+        <div class="card" *ngFor="let produto of produtosLancamentos">
+          <img [src]="produto.imagem" [alt]="produto.nome">
+          <h4>{{produto.nome}}</h4>
+          <p class="price">R${{produto.preco}}</p>
+          <span class="stock">{{produto.estoque}} em estoque</span>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" (click)="nextCarousel('lancamentos')">&#10095;</button>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTAS -->
+<section class="ofertas">
+  <div class="container">
+    <h3 class="section-title">Ofertas</h3>
+
+    <div class="carousel">
+      <button class="carousel-btn prev" (click)="prevCarousel('ofertas')">&#10094;</button>
+
+      <div #carouselTrack class="carousel-track">
+        <div class="card" *ngFor="let produto of produtosOfertas">
+          <img [src]="produto.imagem" [alt]="produto.nome">
+          <h4>{{produto.nome}}</h4>
+          <p class="price">
+            <span class="discount">{{produto.desconto}}</span> 
+            R${{produto.preco}} 
+            <span class="old-price">R${{produto.precoOriginal}}</span>
+          </p>
+          <span class="stock">{{produto.estoque}} em estoque</span>
+        </div>
+      </div>
+
+      <button class="carousel-btn next" (click)="nextCarousel('ofertas')">&#10095;</button>
+    </div>
+  </div>
+</section>
