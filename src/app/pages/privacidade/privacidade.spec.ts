@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UniversoChrisFnt } from './universo-chris-fnt';
+import { Privacidade } from './privacidade';
 
-describe('UniversoChrisFnt', () => {
-  let component: UniversoChrisFnt;
-  let fixture: ComponentFixture<UniversoChrisFnt>;
+describe('Privacidade', () => {
+  let component: Privacidade;
+  let fixture: ComponentFixture<Privacidade>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UniversoChrisFnt]
+      imports: [Privacidade]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(UniversoChrisFnt);
+    fixture = TestBed.createComponent(Privacidade);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

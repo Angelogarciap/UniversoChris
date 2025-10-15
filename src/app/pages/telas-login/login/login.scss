@@ -1,4 +1,3 @@
-
 :host {
   display: block;
 }
@@ -7,7 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
 }
 
 .login-container {
@@ -30,7 +29,7 @@ header .logo h1 {
 }
 
 header .logo span {
-  font-family: "Comic Sans MS", cursive;
+  font-family: 'Comic Sans MS', cursive;
 }
 .login {
   max-width: 400px;
@@ -124,11 +123,11 @@ button:hover {
     margin: 30px auto;
     padding: 0 15px;
   }
-  
+
   .login h2 {
     font-size: 1.5rem;
   }
-  
+
   header .logo h1 {
     font-size: 1.5rem;
   }

@@ -1,4 +1,4 @@
-* {
+header.scss * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -97,11 +97,13 @@ nav ul li:hover {
 .utilities-icon {
   width: 36px;
   height: 36px;
+  color: #fff;
 }
 
 .icon-inline utilities-icon {
   width: 36px;
   height: 36px;
+  color: #fff;
 }
 
 .navbar-links {
@@ -122,6 +124,57 @@ nav ul li:hover {
       &:hover {
         font-weight: bold;
       }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .user-area {
+    margin-top: 10px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0.4rem;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    gap: 0.8rem;
+  }
+
+  .user-area {
+    gap: 10px;
+
+    p {
+      font-size: 0.75rem;
+    }
+
+    .utilities-icon {
+      width: 24px;
+      height: 24px;
     }
   }
 }

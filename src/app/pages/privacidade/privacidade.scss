@@ -1,0 +1,30 @@
+.privacy-policy {
+  max-width: 800px; // controla a largura máxima do texto
+  margin: 0 auto; // centraliza horizontalmente
+  padding: 40px 20px; // espaçamento interno (topo/baixo e laterais)
+  text-align: justify; // distribui o texto uniformemente
+  line-height: 1.6; // melhora a leitura
+  font-family: 'Arial', sans-serif;
+  font-size: 1rem;
+  color: #222;
+
+  h1,
+  h2,
+  h3 {
+    text-align: center; // centraliza os títulos
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  ul {
+    margin: 10px 0 10px 30px;
+    list-style: disc;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+}

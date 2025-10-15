@@ -122,12 +122,6 @@ header {
       min-height: 120px;
     }
 
-    .g-recaptcha {
-      margin-bottom: 20px;
-      display: flex;
-      justify-content: center;
-    }
-
     button {
       width: 100%;
       padding: 12px;
@@ -144,6 +138,39 @@ header {
       }
     }
   }
+}
+
+button {
+  background-color: #b996f6;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #9f7ae9;
+}
+.register-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.register-text a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
 }
 
 // Responsividade para telas menores

@@ -3,9 +3,9 @@ import { Header } from '../../components/header/header';
 import { Footer } from '../../components/footer/footer';
 
 @Component({
-  selector: 'app-contato',
+  selector: 'app-privacidade',
   imports: [Header, Footer],
-  templateUrl: './contato.html',
-  styleUrl: './contato.scss',
+  templateUrl: './privacidade.html',
+  styleUrl: './privacidade.scss',
 })
-export class Contato {}
+export class Privacidade {}

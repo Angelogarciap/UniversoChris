@@ -10,16 +10,19 @@
 
     <div class="navbar-links">
       <ul>
-        <li><a href="./homescreen.html">INÍCIO</a></li>
-        <li><a href="./contato.html">CONTATO</a></li>
+        <li><a href="">INÍCIO</a></li>
+        <li><a href="/contato">CONTATO</a></li>
+        <li><a href="/product">PRODUTOS</a></li>
+        <li><a href="/privacidade">POLÍTICA DE PRIVACIDADE</a></li>
       </ul>
     </div>
 
     <div class="user-area">
-      <!--ícone de Login-->
+      <!--Login-->
       <div class="col-auto d-inline-block d-md-none order-1">
         <span class="utilities-container">
-          <a href="pages/login/" class="btn btn-utility">
+          <!--Ícone de Login-->
+          <a class="btn btn-utility">
             <svg
               class="icon-inline utilities-icon"
               xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +36,8 @@
         </span>
       </div>
       <p>
-        Olá! Faça <a href="pages/login">login</a><br />Ou <a href="pages/register">cadastre-se</a>
+        Olá! Faça <a href="/login">login</a><br />Ou
+        <a href="/register">cadastre-se</a>
       </p>
     </div>
   </div>
@@ -41,6 +45,7 @@
   <!--ícone de Whatsapp-->
   <div class="col-auto col-utility order-1 order-md-2">
     <span class="utilities-container d-inline-block">
+      <!--Logo do Whatsapp-->
       <a
         href="https://wa.me/5592986128349"
         target="_blank"
@@ -60,15 +65,17 @@
     </span>
   </div>
 
+  <!--ícone de carrinho-->
   <div class="col-auto col-utility order-2">
     <span class="utilities-container d-inline-block">
       <div id="ajax-cart" class="cart-summary" data-component="cart-button">
         <a
-          href="#"
+          href="/cart"
           data-toggle="#modal-cart"
           data-modal-url="modal-fullscreen-cart"
           class="js-modal-open js-fullscreen-modal-open btn btn-utility position-relative pr-0"
         >
+          <!--Logo do carrinho-->
           <svg
             class="icon-inline utilities-icon cart-icon mr-md-1"
             xmlns="http://www.w3.org/2000/svg"
