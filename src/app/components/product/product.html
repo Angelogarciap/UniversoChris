@@ -26,7 +26,7 @@
         <label for="qtd">Quantidade:</label>
         <div class="qtd-controle">
           <button type="button" (click)="alterarQuantidade(-1)">-</button>
-          <input id="qtd" type="number" min="1" value="1" />
+          <p  id="qtd" type="number" min="1" value="1">{{ qtd }}</p>
           <button type="button" (click)="alterarQuantidade(+1)">+</button>
         </div>
       </div>
