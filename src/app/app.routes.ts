@@ -8,6 +8,7 @@ import { Register } from './pages/telas-login/register/register';
 import { ForgotPassword } from './pages/telas-login/forgot-password/forgot-password';
 import { Cart } from './pages/cart/cart';
 import { ConfirmacaoPedido } from './pages/confirmacao-pedido/confirmacao-pedido';
+import { AddProduto } from './pages/add-produto/add-produto';
 import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
@@ -20,6 +21,7 @@ export const routes: Routes = [
   { path: 'forgot-password', component: ForgotPassword },
   { path: 'cart', component: Cart },
   { path: 'confirmacao-pedido', component: ConfirmacaoPedido },
+  {path: 'add-produto', component: AddProduto}
 ];
 
 @NgModule({

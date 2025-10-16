@@ -12,6 +12,7 @@ import { Product } from './components/product/product';
 import { ForgotPassword } from './pages/telas-login/forgot-password/forgot-password';
 import { ConfirmacaoPedido } from './pages/confirmacao-pedido/confirmacao-pedido';
 import { routes } from './app.routes';
+import { AddProduto } from './pages/add-produto/add-produto';
 
 @Component({
   selector: 'app-root',
@@ -28,6 +29,7 @@ import { routes } from './app.routes';
     Product,
     ForgotPassword,
     ConfirmacaoPedido,
+    AddProduto
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',
