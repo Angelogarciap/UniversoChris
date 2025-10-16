@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="produto-detalhe" *ngIf="produto">
+  <div class="galeria">
+    <img [src]="produto.imagem" [alt]="produto.nome" />
+  </div>
+
+  <div class="info">
+    <h2>{{ produto.nome }}</h2>
+
+    <p class="preco">
+      <span *ngIf="produto.desconto" class="desconto">{{ produto.desconto }}</span>
+      <span *ngIf="produto.precoOriginal" class="original">R${{ produto.precoOriginal }}</span>
+      <span class="atual">R${{ produto.preco }}</span>
+    </p>
+
+    <p *ngIf="produto.estoque > 0; else semEstoque">Em estoque: {{ produto.estoque }} unidade(s)</p>
+
+    <ng-template #semEstoque>
+      <p class="indisponivel">Produto indisponível</p>
+    </ng-template>
+
+    <button class="comprar">Comprar agora</button>
+  </div>
+</div>
+
+<app-footer></app-footer>

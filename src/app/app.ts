@@ -8,8 +8,9 @@ import { Contato } from './pages/contato/contato';
 import { Privacidade } from './pages/privacidade/privacidade';
 import { Login } from './pages/telas-login/login/login';
 import { Register } from './pages/telas-login/register/register';
-import { Product } from './pages/product/product';
+import { Product } from './components/product/product';
 import { ForgotPassword } from './pages/telas-login/forgot-password/forgot-password';
+import { Products } from './pages/products/products';
 import { routes } from './app.routes';
 
 @Component({
@@ -26,6 +27,7 @@ import { routes } from './app.routes';
     Register,
     Product,
     ForgotPassword,
+    Products,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',

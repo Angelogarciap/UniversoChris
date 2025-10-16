@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
+  font-family: 'Poppins', Arial, sans-serif;
   background-color: #fff;
   color: #333;
 }
@@ -91,11 +91,13 @@ nav ul li:hover {
 .utilities-icon {
   width: 36px;
   height: 36px;
+  color: #fff;
 }
 
 .icon-inline utilities-icon {
   width: 36px;
   height: 36px;
+  color: #fff;
 }
 
 .navbar-links {
@@ -115,4 +117,4 @@ nav ul li:hover {
 }
 .navbar-links ul li a:hover {
   font-weight: bold;
-}/*# sourceMappingURL=header.css.map */
+} /*# sourceMappingURL=header.css.map */

@@ -1,10 +1,13 @@
-<!--  CARROSSEL INICIAL (AUTOMÁTICO)  -->
+<app-header></app-header>
+
 <section class="carrossel-home">
   <div class="carousel-container">
-    <div *ngFor="let banner of banners; let i = index" 
-         class="carousel-slide fade" 
-         [class.active]="currentSlide === i">
-      <img [src]="banner.src" [alt]="banner.alt">
+    <div
+      *ngFor="let banner of banners; let i = index"
+      class="carousel-slide fade"
+      [class.active]="currentSlide === i"
+    >
+      <img [src]="banner.src" [alt]="banner.alt" />
     </div>
   </div>
 </section>
@@ -13,8 +16,8 @@
 <section class="hero">
   <h2>✨ Bem-vindo ao Universo Chris ✨</h2>
   <p>
-    Aqui a criatividade ganha vida! Explore nossa papelaria e encontre produtos fofos, funcionais e cheios de personalidade
-    para deixar seu dia a dia mais organizado e divertido.
+    Aqui a criatividade ganha vida! Explore nossa papelaria e encontre produtos fofos, funcionais e
+    cheios de personalidade para deixar seu dia a dia mais organizado e divertido.
   </p>
 </section>
 
@@ -28,14 +31,16 @@
 
       <div #carouselTrack class="carousel-track">
         <div class="card" *ngFor="let produto of produtosDestaques">
-          <img [src]="produto.imagem" [alt]="produto.nome">
-          <h4>{{produto.nome}}</h4>
+          <img [src]="produto.imagem" [alt]="produto.nome" />
+          <h4>{{ produto.nome }}</h4>
           <p class="price">
-            <span class="discount" *ngIf="produto.desconto">{{produto.desconto}}</span> 
-            R${{produto.preco}}
-            <span class="old-price" *ngIf="produto.precoOriginal">R${{produto.precoOriginal}}</span>
+            <span class="discount" *ngIf="produto.desconto">{{ produto.desconto }}</span>
+            R${{ produto.preco }}
+            <span class="old-price" *ngIf="produto.precoOriginal"
+              >R${{ produto.precoOriginal }}</span
+            >
           </p>
-          <span class="stock">{{produto.estoque}} em estoque</span>
+          <span class="stock">{{ produto.estoque }} em estoque</span>
         </div>
       </div>
 
@@ -51,9 +56,9 @@
 
     <div class="categorias-grid">
       <div class="categoria-card" *ngFor="let categoria of categorias">
-        <img [src]="categoria.imagem" [alt]="categoria.nome">
+        <img [src]="categoria.imagem" [alt]="categoria.nome" />
         <div class="categoria-info">
-          <h4>{{categoria.nome}}</h4>
+          <h4>{{ categoria.nome }}</h4>
           <a [routerLink]="categoria.link" class="btn">VER PRODUTOS</a>
         </div>
       </div>
@@ -71,10 +76,10 @@
 
       <div #carouselTrack class="carousel-track">
         <div class="card" *ngFor="let produto of produtosMaisVendidos">
-          <img [src]="produto.imagem" [alt]="produto.nome">
-          <h4>{{produto.nome}}</h4>
-          <p class="price">R${{produto.preco}}</p>
-          <span class="stock">{{produto.estoque}} em estoque</span>
+          <img [src]="produto.imagem" [alt]="produto.nome" />
+          <h4>{{ produto.nome }}</h4>
+          <p class="price">R${{ produto.preco }}</p>
+          <span class="stock">{{ produto.estoque }} em estoque</span>
         </div>
       </div>
 
@@ -93,10 +98,10 @@
 
       <div #carouselTrack class="carousel-track">
         <div class="card" *ngFor="let produto of produtosLancamentos">
-          <img [src]="produto.imagem" [alt]="produto.nome">
-          <h4>{{produto.nome}}</h4>
-          <p class="price">R${{produto.preco}}</p>
-          <span class="stock">{{produto.estoque}} em estoque</span>
+          <img [src]="produto.imagem" [alt]="produto.nome" />
+          <h4>{{ produto.nome }}</h4>
+          <p class="price">R${{ produto.preco }}</p>
+          <span class="stock">{{ produto.estoque }} em estoque</span>
         </div>
       </div>
 
@@ -115,14 +120,14 @@
 
       <div #carouselTrack class="carousel-track">
         <div class="card" *ngFor="let produto of produtosOfertas">
-          <img [src]="produto.imagem" [alt]="produto.nome">
-          <h4>{{produto.nome}}</h4>
+          <img [src]="produto.imagem" [alt]="produto.nome" />
+          <h4>{{ produto.nome }}</h4>
           <p class="price">
-            <span class="discount">{{produto.desconto}}</span> 
-            R${{produto.preco}} 
-            <span class="old-price">R${{produto.precoOriginal}}</span>
+            <span class="discount">{{ produto.desconto }}</span>
+            R${{ produto.preco }}
+            <span class="old-price">R${{ produto.precoOriginal }}</span>
           </p>
-          <span class="stock">{{produto.estoque}} em estoque</span>
+          <span class="stock">{{ produto.estoque }} em estoque</span>
         </div>
       </div>
 
@@ -130,3 +135,4 @@
     </div>
   </div>
 </section>
+<app-footer></app-footer>
