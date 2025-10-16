@@ -1,90 +1,82 @@
-// Variáveis de cor
-$primary-color: #7e4bde; // Roxo
+// Paleta de cores
+$primary-color: #7e4bde; // Roxo principal
 $secondary-color: #fff; // Branco
-$button-color: #5f3bc4; // Roxo mais escuro para o botão
-$text-color: #fff; // Cor do texto
+$accent-color: #5f3bc4; // Roxo mais escuro
+$text-color: #ffffff; // Texto claro
 
-// Resetando margens e padding
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-// Corpo e fundo
-body {
-  font-family: Arial, sans-serif;
-  background-color: $primary-color;
-  color: $text-color;
-}
-
-// Rodapé
 footer {
-  padding: 50px 20px;
   background-color: $primary-color;
   color: $text-color;
+  padding: 50px 0;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
+  text-align: center;
 
-  // Layout do rodapé com flexbox
   .container {
     display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
   }
 
   .footer-section {
     flex: 1;
-    padding: 10px;
+    min-width: 250px;
+    margin: 20px 10px;
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 10px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $accent-color;
+          }
+        }
+      }
+    }
   }
 
-  // Títulos das seções
-  .footer-section h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
+  .footer-bottom {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.9);
 
-  // Links de departamentos
-  .footer-section ul {
-    list-style: none;
-  }
-
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-
-  .footer-section a {
-    color: $text-color;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $button-color;
+    p {
+      margin: 5px 0;
     }
   }
 
   // Responsividade
   @media (max-width: 768px) {
-    footer .container {
+    .container {
       flex-direction: column;
       align-items: center;
+      text-align: center;
     }
 
     .footer-section {
-      width: 100%;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .newsletter input[type='email'] {
-      width: 80%;
-    }
-
-    .social-icons {
-      flex-direction: column;
+      margin-bottom: 30px;
     }
   }
 }
