@@ -1,25 +1,69 @@
 <app-header></app-header>
-<div class="produto-detalhe" *ngIf="produto">
-  <div class="galeria">
-    <img [src]="produto.imagem" [alt]="produto.nome" />
+<div class="produto-container">
+  <div class="produto-conteudo">
+    <!-- Imagem do produto -->
+    <div class="produto-imagem">
+      <img
+        src="https://dcdn-us.mitiendanube.com/stores/004/410/719/products/17-9bed0e03340f8043e617578967007693-1024-1024.webp"
+        alt="Chaveiro de Pelúcia Gatinho Sanrio – Kuromi – 12 cm"
+      />
+    </div>
+
+    <!-- Informações principais -->
+    <div class="produto-info">
+      <nav class="breadcrumb">
+        <a href="#">Início</a> ›
+        <a href="/product">Chaveiro de Pelúcia Gatinho Sanrio – Kuromi – 12 cm</a>
+      </nav>
+
+      <h1 class="produto-titulo">Chaveiro de Pelúcia Gatinho Sanrio – Kuromi – 12 cm</h1>
+
+      <p class="produto-preco">R$49,90</p>
+
+      <div class="aviso">⚠️ Atenção, última peça!</div>
+
+      <div class="quantidade">
+        <label for="qtd">Quantidade:</label>
+        <div class="qtd-controle">
+          <button>-</button>
+          <input id="qtd" type="number" min="1" value="1" />
+          <button>+</button>
+        </div>
+      </div>
+
+      <button class="btn-comprar">comprar</button>
+
+      <div class="frete">
+        <p>Entrega para o CEP:</p>
+        <div class="frete-input">
+          <input type="text" placeholder="00000-000" maxlength="9" />
+          <button>CALCULAR</button>
+        </div>
+        <p class="frete-info">O prazo começa a contar após a confirmação do pagamento.</p>
+      </div>
+
+      <div class="entrega">
+        <h4>Opções de entrega</h4>
+        <ul>
+          <li>📦 Entrega normal: até 9 dias úteis</li>
+          <li>🚚 Entrega expressa: até 3 dias úteis</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-  <div class="info">
-    <h2>{{ produto.nome }}</h2>
-
-    <p class="preco">
-      <span *ngIf="produto.desconto" class="desconto">{{ produto.desconto }}</span>
-      <span *ngIf="produto.precoOriginal" class="original">R${{ produto.precoOriginal }}</span>
-      <span class="atual">R${{ produto.preco }}</span>
-    </p>
-
-    <p *ngIf="produto.estoque > 0; else semEstoque">Em estoque: {{ produto.estoque }} unidade(s)</p>
-
-    <ng-template #semEstoque>
-      <p class="indisponivel">Produto indisponível</p>
-    </ng-template>
-
-    <button class="comprar">Comprar agora</button>
+  <!-- Descrição -->
+  <div class="descricao">
+    <h2>Descrição</h2>
+    <h3>Chaveiro de Pelúcia Gatinho Sanrio – Kuromi – 12 cm</h3>
+    <ul>
+      <li>Leve com você a sua personagem favorita em todos os lugares!</li>
+      <li>Chaveiro de pelúcia super macio e fofo.</li>
+      <li>Perfeito para pendurar em bolsas, mochilas ou chaves.</li>
+      <li>Tamanho aproximado: 12 cm.</li>
+      <li>Material: pelúcia e enchimento de algodão.</li>
+      <li>Produto original inspirado na personagem Kuromi da Sanrio 💜</li>
+    </ul>
   </div>
 </div>
 

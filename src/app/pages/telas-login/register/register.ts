@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule],
   templateUrl: './register.html',
-  styleUrls: ['./register.scss']
+  styleUrls: ['./register.scss'],
 })
 export class Register {
   // Por enquanto vazio - só o design
