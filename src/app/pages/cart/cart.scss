@@ -151,6 +151,22 @@ button:hover {
   text-decoration: underline;
 }
 
+#botao-pagamento {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #7a2cf1; /* Verde */
+  color: white;
+  text-decoration: none; /* Remove sublinhado do link */
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+
+#botao-pagamento:hover {
+  background-color: #7a2cf1; /* Tom mais escuro ao passar o mouse */
+}
+
 @media (max-width: 900px) {
   .checkout-container {
     flex-direction: column;
