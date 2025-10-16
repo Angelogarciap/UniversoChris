@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Braah+One:400,700&display=swap');
+
 .produto-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 3rem 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Braah One', sans-serif;
   color: #222;
 
   .produto-conteudo {
@@ -20,9 +22,11 @@
     justify-content: center;
 
     img {
-      width: 300px;
+      width: auto;
+      max-width: 650px;
       height: auto;
       border-radius: 12px;
+      object-fit: contain;
     }
   }
 

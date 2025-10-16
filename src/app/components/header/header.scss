@@ -1,17 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Braah+One:400,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Braah One', sans-serif;
 }
 
 body {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Braah One', sans-serif;
   background-color: #fff;
   color: #333;
 }
 
 .navbar {
-  background-color: #7a3cff;
+  background-color: #7029d0;
   padding: 0.7rem 1.5rem;
   position: sticky;
   top: 0;

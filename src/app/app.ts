@@ -10,6 +10,7 @@ import { Login } from './pages/telas-login/login/login';
 import { Register } from './pages/telas-login/register/register';
 import { Product } from './components/product/product';
 import { ForgotPassword } from './pages/telas-login/forgot-password/forgot-password';
+import { ConfirmacaoPedido } from './pages/confirmacao-pedido/confirmacao-pedido';
 import { routes } from './app.routes';
 
 @Component({
@@ -26,6 +27,7 @@ import { routes } from './app.routes';
     Register,
     Product,
     ForgotPassword,
+    ConfirmacaoPedido,
   ],
   templateUrl: './app.html',
   styleUrl: './app.scss',

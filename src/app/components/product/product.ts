@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Header } from '../header/header';
 import { Footer } from '../footer/footer';
-import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common'; // precisa do FormsModule para [(ngModel)]
 
 @Component({
   selector: 'app-product',
@@ -10,4 +10,13 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './product.html',
   styleUrls: ['./product.scss'],
 })
-export class Product {}
+export class Product {
+  qtd: number = 1;
+
+  alterarQuantidade(delta: number) {
+    const novaQuantidade = this.qtd + delta;
+    if (novaQuantidade >= 1) {
+      this.qtd = novaQuantidade;
+    }
+  }
+}

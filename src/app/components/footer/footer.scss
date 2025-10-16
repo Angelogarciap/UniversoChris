@@ -1,14 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Braah+One:400,700&display=swap');
+
 // Paleta de cores
-$primary-color: #7e4bde; // Roxo principal
+$primary-color: #7029d0; // Roxo principal
 $secondary-color: #fff; // Branco
-$accent-color: #5f3bc4; // Roxo mais escuro
+$accent-color: #7029d0; // Roxo mais escuro
 $text-color: #ffffff; // Texto claro
 
 footer {
   background-color: $primary-color;
   color: $text-color;
   padding: 50px 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Braah One', sans-serif;
   font-size: 14px;
   text-align: center;
 

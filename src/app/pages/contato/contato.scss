@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Braah+One:400,700&display=swap');
+
 // Variáveis para cores e fontes
 $primary-color: #7a3cff;
 $secondary-color: #f4f4f4;
@@ -7,8 +9,12 @@ $button-hover-color: #5e29a5;
 $input-border-color: #ccc;
 $input-focus-border-color: #7a3cff;
 
+* {
+  font-family: 'Braah One', sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Braah One', sans-serif;
   background-color: $secondary-color;
   margin: 0;
   padding: 0;

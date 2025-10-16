@@ -25,13 +25,15 @@
       <div class="quantidade">
         <label for="qtd">Quantidade:</label>
         <div class="qtd-controle">
-          <button>-</button>
+          <button type="button" (click)="alterarQuantidade(-1)">-</button>
           <input id="qtd" type="number" min="1" value="1" />
-          <button>+</button>
+          <button type="button" (click)="alterarQuantidade(+1)">+</button>
         </div>
       </div>
 
-      <button class="btn-comprar">comprar</button>
+      <a href="/cart">
+        <button class="btn-comprar">comprar</button>
+      </a>
 
       <div class="frete">
         <p>Entrega para o CEP:</p>

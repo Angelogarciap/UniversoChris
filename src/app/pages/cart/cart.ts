@@ -4,7 +4,7 @@ import { Footer } from '../../components/footer/footer';
 
 @Component({
   selector: 'app-cart',
-  imports: [],
+  imports: [Header, Footer],
   templateUrl: './cart.html',
   styleUrl: './cart.scss',
 })
