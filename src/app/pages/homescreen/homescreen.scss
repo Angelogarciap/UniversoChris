@@ -1,3 +1,6 @@
+//  IMPORT DA FONTE
+@import url('https://fonts.googleapis.com/css?family=Braah+One:400,700&display=swap');
+
 //  VARIÁVEIS
 $primary-color: #6b4eff;
 $text-color: #222;
@@ -66,6 +69,7 @@ $transition: all 0.2s ease;
 }
 
 body {
+  font-family: 'Braah One', sans-serif;
   color: $text-color;
   background-color: #fff;
   line-height: 1.5;
@@ -77,10 +81,12 @@ body {
   padding: 0 1rem;
 }
 
-//  CARROSSEL INICIAL
+//  CARROSSEL INICIAL CORRIGIDO
 .carrossel-home {
   position: relative;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
   height: 400px;
   overflow: hidden;
 
@@ -101,6 +107,7 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      display: block;
     }
 
     &.active {
@@ -123,6 +130,7 @@ body {
     font-weight: 700;
     color: $text-color;
     margin-bottom: 1rem;
+    font-family: 'Braah One', sans-serif;
   }
 
   p {
@@ -130,6 +138,7 @@ body {
     margin: 0 auto;
     color: $text-light;
     font-size: 1rem;
+    font-family: 'Braah One', sans-serif;
   }
 }
 
@@ -139,6 +148,7 @@ body {
   font-weight: 700;
   margin-bottom: 1rem;
   color: $text-color;
+  font-family: 'Braah One', sans-serif;
 }
 
 //  DESTAQUES
@@ -173,12 +183,18 @@ body {
 .card {
   @include card-style;
   min-width: 220px;
+  max-width: 220px;
+  height: 320px;
   flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
 
   img {
     width: 100%;
+    height: 150px;
     border-radius: 8px;
     margin-bottom: 0.75rem;
+    object-fit: cover;
   }
 
   h4 {
@@ -186,30 +202,49 @@ body {
     font-weight: 600;
     margin-bottom: 0.5rem;
     color: $text-color;
+    font-family: 'Braah One', sans-serif;
+
+    // Limite de 2 linhas com reticências (CORRIGIDO)
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.3;
+    min-height: 2.6em;
   }
 
   .price {
-    font-weight: 700;
+    font-weight: 400;
     color: #000;
     margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-family: 'Braah One', sans-serif;
   }
 
   .old-price {
     text-decoration: line-through;
     font-size: 0.9rem;
     color: #888;
+    margin-left: 0.5rem;
+    font-family: 'Braah One', sans-serif;
   }
 
   .discount {
     color: $primary-color;
-    font-weight: 600;
+    font-weight: 400;
     margin-right: 0.25rem;
+    font-size: 0.85rem;
+    font-family: 'Braah One', sans-serif;
   }
 
   .stock {
     font-size: 0.85rem;
     color: #555;
-    font-weight: 600;
+    font-weight: 400;
+    margin-top: auto;
+    font-family: 'Braah One', sans-serif;
   }
 }
 
@@ -253,6 +288,7 @@ body {
         font-weight: 700;
         color: $text-color;
         margin-bottom: 0.75rem;
+        font-family: 'Braah One', sans-serif;
       }
     }
   }
@@ -264,11 +300,12 @@ body {
   background-color: #000;
   color: #fff;
   padding: 0.5rem 1rem;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 0.9rem;
   border-radius: 5px;
   text-decoration: none;
   transition: background 0.2s ease;
+  font-family: 'Braah One', sans-serif;
 
   &:hover {
     background-color: $primary-color;
@@ -309,10 +346,22 @@ body {
 
   .card {
     min-width: 180px;
+    max-width: 180px;
+    height: 280px;
+
+    img {
+      height: 120px;
+    }
+
+    h4 {
+      font-size: 0.85rem;
+      min-height: 2.3em;
+    }
   }
 
   .mais-vendidos .card {
     min-width: 200px;
+    max-width: 200px;
   }
 
   .hero {
@@ -331,9 +380,50 @@ body {
 
   .card {
     min-width: 160px;
+    max-width: 160px;
+    height: 260px;
+
+    img {
+      height: 100px;
+    }
   }
 
   .hero h2 {
     font-size: 1.3rem;
+  }
+}
+
+//test link na imagem e no nome do produto
+.clickable-area {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+
+  // Remove qualquer estilo de link
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+  }
+
+  // Efeito na imagem
+  img {
+    transition: transform 0.2s ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  // Efeito no nome do produto
+  h4 {
+    transition: color 0.2s ease;
+  }
+
+  &:hover h4 {
+    color: $primary-color;
   }
 }

@@ -1,5 +1,4 @@
-<app-header></app-header>
-
+<!--  CARROSSEL INICIAL (AUTOMÁTICO)  -->
 <section class="carrossel-home">
   <div class="carousel-container">
     <div
@@ -30,9 +29,14 @@
       <button class="carousel-btn prev" (click)="prevCarousel('destaques')">&#10094;</button>
 
       <div #carouselTrack class="carousel-track">
+        <!-- Card 1 -->
         <div class="card" *ngFor="let produto of produtosDestaques">
-          <img [src]="produto.imagem" [alt]="produto.nome" />
-          <h4>{{ produto.nome }}</h4>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <img [src]="produto.imagem" [alt]="produto.nome" />
+          </a>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <h4>{{ produto.nome }}</h4>
+          </a>
           <p class="price">
             <span class="discount" *ngIf="produto.desconto">{{ produto.desconto }}</span>
             R${{ produto.preco }}
@@ -76,8 +80,12 @@
 
       <div #carouselTrack class="carousel-track">
         <div class="card" *ngFor="let produto of produtosMaisVendidos">
-          <img [src]="produto.imagem" [alt]="produto.nome" />
-          <h4>{{ produto.nome }}</h4>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <img [src]="produto.imagem" [alt]="produto.nome" />
+          </a>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <h4>{{ produto.nome }}</h4>
+          </a>
           <p class="price">R${{ produto.preco }}</p>
           <span class="stock">{{ produto.estoque }} em estoque</span>
         </div>
@@ -98,8 +106,12 @@
 
       <div #carouselTrack class="carousel-track">
         <div class="card" *ngFor="let produto of produtosLancamentos">
-          <img [src]="produto.imagem" [alt]="produto.nome" />
-          <h4>{{ produto.nome }}</h4>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <img [src]="produto.imagem" [alt]="produto.nome" />
+          </a>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <h4>{{ produto.nome }}</h4>
+          </a>
           <p class="price">R${{ produto.preco }}</p>
           <span class="stock">{{ produto.estoque }} em estoque</span>
         </div>
@@ -120,8 +132,12 @@
 
       <div #carouselTrack class="carousel-track">
         <div class="card" *ngFor="let produto of produtosOfertas">
-          <img [src]="produto.imagem" [alt]="produto.nome" />
-          <h4>{{ produto.nome }}</h4>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <img [src]="produto.imagem" [alt]="produto.nome" />
+          </a>
+          <a [routerLink]="['/produto']" class="clickable-area">
+            <h4>{{ produto.nome }}</h4>
+          </a>
           <p class="price">
             <span class="discount">{{ produto.desconto }}</span>
             R${{ produto.preco }}
